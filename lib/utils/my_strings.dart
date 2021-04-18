@@ -1,7 +1,4 @@
 import 'dart:core';
-
-import 'package:flutter/material.dart';
-
 class MyStrings{
 
   static String login = 'login';

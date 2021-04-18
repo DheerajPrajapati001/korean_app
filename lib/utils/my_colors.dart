@@ -4,6 +4,7 @@ class MyColors{
 
   static Color blackClr = Colors.black;
   static Color whiteClr = Colors.white;
+  static Color transparent = Colors.transparent;
   static Color lightGreenClr = Color(0xff83C124);
   static Color darkGreenClr = Color(0xff31BE4D);
   static Color greyClr = Color(0xff9A9191);

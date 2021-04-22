@@ -21,4 +21,8 @@ class MyImages{
   static String lockIcon = "assets/lock Icon.png";
   static String creditCard = "assets/credit_card.png";
   static String editIcon = "assets/editIcon.png";
+  static String addBoxBlack = "assets/add_box black.png";
+  static String clipboardListBlack = "assets/clipboard_list_black.png";
+  static String flipBoardIconBlack = "assets/flipboard icon black.png";
+  static String idCardBlack = "assets/id_card black.png";
 }

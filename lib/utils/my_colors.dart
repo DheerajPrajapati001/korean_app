@@ -9,6 +9,8 @@ class MyColors{
   static Color darkGreenClr = Color(0xff31BE4D);
   static Color greyClr = Color(0xff9A9191);
   static Color greyBorderClr = Color(0xff707070);
+  static Color greyFontClr = Color(0xff707070);
   static Color iconClr = Color(0xff2D5767);
+  static Color dividerClr = Color(0xff645555);
 
 }

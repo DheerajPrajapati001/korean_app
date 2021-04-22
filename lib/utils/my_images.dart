@@ -1,5 +1,4 @@
 class MyImages{
-
   static String logo = "assets/logo.png";
   static String sample1 = "assets/sample1.png";
   static String sample2 = "assets/sample2.png";
@@ -15,5 +14,11 @@ class MyImages{
   static String idCard = "assets/id_card.png";
   static String messageIcon = "assets/message icon.png";
   static String searchIcon = "assets/search icon.png";
-
+  static String clockIcon = "assets/clockIcon.png";
+  static String menuIcon = "assets/menuIcon.png";
+  static String messageSquare = "assets/message_square.png";
+  static String infoIcon = "assets/info_icon.png";
+  static String lockIcon = "assets/lock Icon.png";
+  static String creditCard = "assets/credit_card.png";
+  static String editIcon = "assets/editIcon.png";
 }

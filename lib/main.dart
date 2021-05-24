@@ -18,16 +18,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        fontFamily: 'Teko',
+        fontFamily: 'Segu',
       ),
       debugShowCheckedModeBanner: false,
-      home: PostNewJob(),
+      home: Buttons(),
       routes: {
         'Page1': (context) => LoadingPage(),
         'Page2': (context) => LoginPage(),
         'Page3': (context) => SignUpPage(),
         'Page4': (context) => HomeLogged(),
         'Page5': (context) => JobPage(),
+        'Page6': (context) => JobPaymentPage(),
+        'Page7': (context) => PostNewJob(),
       },
     );
   }

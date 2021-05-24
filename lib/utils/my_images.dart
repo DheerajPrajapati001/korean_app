@@ -25,4 +25,6 @@ class MyImages{
   static String clipboardListBlack = "assets/clipboard_list_black.png";
   static String flipBoardIconBlack = "assets/flipboard icon black.png";
   static String idCardBlack = "assets/id_card black.png";
+  static String downArrow = "assets/down arrow.png";
+  static String image = "assets/icon_metro_file_picture.png";
 }

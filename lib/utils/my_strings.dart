@@ -16,10 +16,13 @@ class MyStrings{
   static String titleSample = 'Title Sample';
   static String notYet = 'Not yet rated';
   static String buyNow = 'Buy Now';
+  static String postARequest = 'Post a request';
   static String requestCustom = 'Request custom offer';
   static String lastSeen = 'Last seen:';
   static String weekAgo = '1 week ago';
   static String call = 'Call';
+  static String search = 'Search';
+  static String request = 'Request';
   static String secureTransaction = '100% secure transaction Direct\nransaction prevention system';
   static String ifYouPay = 'If you pay through Assa, you can\nsecurely protect your payment until\nthe transaction is completed.';
   static String relatedTopics = 'Related topics';

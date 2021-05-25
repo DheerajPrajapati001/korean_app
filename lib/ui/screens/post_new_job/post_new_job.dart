@@ -4,6 +4,7 @@ import 'package:korean_app/ui/custom_widgets/custom_appbar.dart';
 import 'package:korean_app/ui/custom_widgets/custom_clr_button.dart';
 import 'package:korean_app/ui/custom_widgets/custom_normal_textfield.dart';
 import 'package:korean_app/ui/custom_widgets/grey_border_cont.dart';
+import 'package:korean_app/ui/custom_widgets/light_green_button.dart';
 import 'package:korean_app/utils/my_colors.dart';
 import 'package:korean_app/utils/my_images.dart';
 import 'package:korean_app/utils/my_strings.dart';
@@ -16,6 +17,8 @@ class PostNewJob extends StatefulWidget {
 class _PostNewJobState extends State<PostNewJob> {
   int value = 0;
   bool isJobs = true;
+  bool checkValue = false;
+  bool _checkValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +38,7 @@ class _PostNewJobState extends State<PostNewJob> {
                       children: [
                         Image.asset(
                           MyImages.editIcon,
-                          height: MediaQuery.of(context).size.height * .04,
+                          height: MediaQuery.of(context).size.height * .05,
                         ),
                         SizedBox(
                           width: MediaQuery.of(context).size.height * .01,
@@ -339,12 +342,12 @@ class _PostNewJobState extends State<PostNewJob> {
                           : SizedBox()
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: Column(
-                      children: [
-                        value == 1
-                            ? Column(
+                  Column(
+                    children: [
+                      value == 1
+                          ? Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 20),
+                              child: Column(
                                 children: [
                                   GreyBorderCont(
                                     widget: Padding(
@@ -520,172 +523,443 @@ class _PostNewJobState extends State<PostNewJob> {
                                                 .04),
                                       ),
                                       Spacer(),
-                                      CustomClrButton(text: MyStrings.jobImage,)
+                                      CustomClrButton(
+                                        text: MyStrings.jobImage,
+                                      )
                                     ],
                                   )
                                 ],
-                              )
-                            : SizedBox()
-                      ],
-                    ),
+                              ),
+                            )
+                          : SizedBox()
+                    ],
                   ),
                   Column(
-                    children: [value == 2 ?
-                    Column(
-                      children: [
-                        GreyBorderCont(
-                          widget: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  MyStrings.image,
-                                  style: TextStyle(
-                                      color: MyColors.greyFontClr),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Container(
-                                  width: MediaQuery.of(context).size.width,
-                                  height: MediaQuery.of(context).size.height*.15,
-                                  decoration: BoxDecoration(
-                                    color: MyColors.lightContClr,
-                                    border: Border.all(
-                                      color: MyColors.greyBorderClr
-                                    ),
-                                    borderRadius: BorderRadius.circular(10)
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                        width: MediaQuery.of(context).size.width*.05,
-                                      ),
-                                      Container(
-                                        width: MediaQuery.of(context).size.width*.3,
-                                        height: MediaQuery.of(context).size.height*.1,
-                                        decoration: BoxDecoration(
-                                          color: MyColors.whiteClr,
-                                            border: Border.all(
-                                                color: MyColors.greyBorderClr
-                                            ),
-                                            borderRadius: BorderRadius.circular(10)
-                                        ),
-                                        child: Center(
-                                          child: Image.asset(MyImages.image,height: MediaQuery.of(context).size.width*.1,),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                Text(
-                                  MyStrings.videoLink,
-                                  style: TextStyle(
-                                      color: MyColors.greyFontClr),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Container(
-                                  width: MediaQuery.of(context).size.width,
-                                  height: MediaQuery.of(context).size.height*.05,
-                                  decoration: BoxDecoration(
-                                      color: MyColors.lightContClr,
-                                      border: Border.all(
-                                          color: MyColors.greyBorderClr
-                                      ),
-                                      borderRadius: BorderRadius.circular(8)
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal: 5),
-                                    child: TextField(
-                                      decoration: InputDecoration(
-                                          border: InputBorder.none
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Row(
-                                  children: [
-                                    Spacer(),
-                                    Text(MyStrings.deleteVideo,style: TextStyle(fontWeight: FontWeight.bold),),
-                                  ],
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height*.25,
-                        ),
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.arrow_back_ios,
-                              color: MyColors.greyFontClr,
-                            ),
-                            Text(
-                              MyStrings.buyerGuide,
-                              style: TextStyle(
-                                  color: MyColors.greyFontClr,
-                                  fontSize: MediaQuery.of(context)
-                                      .size
-                                      .width *
-                                      .04),
-                            ),
-                            Spacer(),
-                            CustomClrButton(text: MyStrings.additionalOptions,)
-                          ],
-                        )
-                      ],
-                    ) : SizedBox()],
-                  ),
-                  Column(
-                    children: [value == 3 ? Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10),
-                      child: Column(
-                        children: [
-                          GreyBorderCont(
-                            widget: Padding(
-                              padding: const EdgeInsets.all(10),
+                    children: [
+                      value == 2
+                          ? Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 20),
                               child: Column(
                                 children: [
-
+                                  GreyBorderCont(
+                                    widget: Padding(
+                                      padding: const EdgeInsets.all(10),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            MyStrings.image,
+                                            style: TextStyle(
+                                                color: MyColors.greyFontClr),
+                                          ),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Container(
+                                            width: MediaQuery.of(context)
+                                                .size
+                                                .width,
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height *
+                                                .15,
+                                            decoration: BoxDecoration(
+                                                color: MyColors.lightContClr,
+                                                border: Border.all(
+                                                    color:
+                                                        MyColors.greyBorderClr),
+                                                borderRadius:
+                                                    BorderRadius.circular(10)),
+                                            child: Row(
+                                              children: [
+                                                SizedBox(
+                                                  width: MediaQuery.of(context)
+                                                          .size
+                                                          .width *
+                                                      .05,
+                                                ),
+                                                Container(
+                                                  width: MediaQuery.of(context)
+                                                          .size
+                                                          .width *
+                                                      .3,
+                                                  height: MediaQuery.of(context)
+                                                          .size
+                                                          .height *
+                                                      .1,
+                                                  decoration: BoxDecoration(
+                                                      color: MyColors.whiteClr,
+                                                      border: Border.all(
+                                                          color: MyColors
+                                                              .greyBorderClr),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              10)),
+                                                  child: Center(
+                                                    child: Image.asset(
+                                                      MyImages.image,
+                                                      height:
+                                                          MediaQuery.of(context)
+                                                                  .size
+                                                                  .width *
+                                                              .1,
+                                                    ),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 20,
+                                          ),
+                                          Text(
+                                            MyStrings.videoLink,
+                                            style: TextStyle(
+                                                color: MyColors.greyFontClr),
+                                          ),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Container(
+                                            width: MediaQuery.of(context)
+                                                .size
+                                                .width,
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height *
+                                                .05,
+                                            decoration: BoxDecoration(
+                                                color: MyColors.lightContClr,
+                                                border: Border.all(
+                                                    color:
+                                                        MyColors.greyBorderClr),
+                                                borderRadius:
+                                                    BorderRadius.circular(8)),
+                                            child: Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 5),
+                                              child: TextField(
+                                                decoration: InputDecoration(
+                                                    border: InputBorder.none),
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Row(
+                                            children: [
+                                              Spacer(),
+                                              Text(
+                                                MyStrings.deleteVideo,
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                            ],
+                                          ),
+                                          SizedBox(
+                                            height: 20,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: MediaQuery.of(context).size.height *
+                                        .25,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.arrow_back_ios,
+                                        color: MyColors.greyFontClr,
+                                      ),
+                                      Text(
+                                        MyStrings.buyerGuide,
+                                        style: TextStyle(
+                                            color: MyColors.greyFontClr,
+                                            fontSize: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                .04),
+                                      ),
+                                      Spacer(),
+                                      CustomClrButton(
+                                        text: MyStrings.additionalOptions,
+                                      )
+                                    ],
+                                  )
                                 ],
                               ),
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.arrow_back_ios,
-                                color: MyColors.greyFontClr,
+                            )
+                          : SizedBox()
+                    ],
+                  ),
+                  Column (
+                    children: [
+                      value == 3
+                          ? Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              child: Column(
+                                children: [
+                                  GreyBorderCont(
+                                    widget: Padding(
+                                      padding: const EdgeInsets.all(10),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Checkbox(
+                                                  activeColor:
+                                                      MyColors.darkGreenClr,
+                                                  value: checkValue,
+                                                  onChanged: (T) {
+                                                    setState(() {
+                                                      checkValue = T;
+                                                    });
+                                                  }),
+                                              Text(
+                                                MyStrings.additionalOptions,
+                                                style: TextStyle(
+                                                    color: MyColors.greyFontClr,
+                                                    fontSize:
+                                                        MediaQuery.of(context)
+                                                                .size
+                                                                .width *
+                                                            .04),
+                                              )
+                                            ],
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Text(
+                                            MyStrings
+                                                .additionalServiceDescription,
+                                            style: TextStyle(
+                                                color: MyColors.greyFontClr,
+                                                fontSize: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    .04),
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          CustomNormalTextField(),
+                                          SizedBox(
+                                            height: 20,
+                                          ),
+                                          Text(
+                                            MyStrings.price,
+                                            style: TextStyle(
+                                                color: MyColors.greyFontClr,
+                                                fontSize: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    .04),
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Container(
+                                            height: MediaQuery.of(context)
+                                                .size
+                                                .height *
+                                                .05,
+                                            width: MediaQuery.of(context)
+                                                .size
+                                                .width,
+                                            decoration: BoxDecoration(
+                                                color: MyColors.lightContClr,
+                                                borderRadius:
+                                                BorderRadius.circular(10),
+                                                border: Border.all(
+                                                    color: MyColors
+                                                        .greyBorderClr)),
+                                            child: Row(
+                                              children: [
+                                                Container(
+                                                  height: MediaQuery.of(context)
+                                                      .size
+                                                      .height *
+                                                      .05,
+                                                  width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                      .1,
+                                                  decoration: BoxDecoration(
+                                                      color:
+                                                      MyColors.lightContClr,
+                                                      borderRadius:
+                                                      BorderRadius.circular(
+                                                          10),
+                                                      border: Border.all(
+                                                          color: MyColors
+                                                              .greyBorderClr)),
+                                                  child: Center(
+                                                    child: Text('원')
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                      .02,
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 20,
+                                          ),
+                                          Text(
+                                            MyStrings.howManyDays,
+                                            style: TextStyle(
+                                                color: MyColors.greyFontClr,
+                                                fontSize: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                    .04),
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Container(
+                                              height: MediaQuery.of(context)
+                                                  .size
+                                                  .height *
+                                                  .05,
+                                              decoration: BoxDecoration(
+                                                  color: MyColors.lightContClr,
+                                                  borderRadius:
+                                                  BorderRadius.circular(10),
+                                                  border: Border.all(
+                                                      color: MyColors
+                                                          .greyBorderClr)),
+                                              child: Padding(
+                                                padding:
+                                                const EdgeInsets.symmetric(
+                                                    horizontal: 15),
+                                                child: Row(
+                                                  children: [
+                                                    Spacer(),
+                                                    Image.asset(
+                                                      MyImages.downArrow,
+                                                      height:
+                                                      MediaQuery.of(context)
+                                                          .size
+                                                          .width *
+                                                          .03,
+                                                    )
+                                                  ],
+                                                ),
+                                              )),
+                                          Row(
+                                            children: [
+                                              Checkbox(
+                                                  activeColor:
+                                                  MyColors.darkGreenClr,
+                                                  value: _checkValue,
+                                                  onChanged: (T) {
+                                                    setState(() {
+                                                      _checkValue = T;
+                                                    });
+                                                  }),
+                                              Text(
+                                                MyStrings.multipleQuantity,
+                                                style: TextStyle(
+                                                    color: MyColors.greyFontClr,
+                                                    fontSize:
+                                                    MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                        .04),
+                                              )
+                                            ],
+                                          ),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Row(
+                                            children: [
+                                              Spacer(),
+                                              Text(
+                                                MyStrings.addAndDelete,
+                                                style: TextStyle(
+                                                    color: MyColors.greyFontClr,
+                                                    fontSize: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                        .04),
+                                              ),
+                                              SizedBox(
+                                                width: 10,
+                                              )
+                                            ],
+                                          ),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Text(
+                                            MyStrings.createAdditional,
+                                            style: TextStyle(
+                                                color: MyColors.greyFontClr,
+                                                fontSize: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                    .04),
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Padding(
+                                            padding:  EdgeInsets.only(right: MediaQuery.of(context).size.height*.3),
+                                            child: LightGreenButton(
+                                              onTap: (){},
+                                              text: MyStrings.publish,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.arrow_back_ios,
+                                        color: MyColors.greyFontClr,
+                                      ),
+                                      Text(
+                                        MyStrings.jobImage,
+                                        style: TextStyle(
+                                            color: MyColors.greyFontClr,
+                                            fontSize: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                .04),
+                                      ),
+                                    ],
+                                  )
+                                ],
                               ),
-                              Text(
-                                MyStrings.jobImage,
-                                style: TextStyle(
-                                    color: MyColors.greyFontClr,
-                                    fontSize: MediaQuery.of(context)
-                                        .size
-                                        .width *
-                                        .04),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ) : SizedBox()],
+                            )
+                          : SizedBox()
+                    ],
                   ),
                 ],
               ),

@@ -27,4 +27,6 @@ class MyImages{
   static String idCardBlack = "assets/id_card black.png";
   static String downArrow = "assets/down arrow.png";
   static String image = "assets/icon_metro_file_picture.png";
+  static String deleteIcon = "assets/delete icon.png";
+  static String downloadIcon = "assets/download icon.png";
 }

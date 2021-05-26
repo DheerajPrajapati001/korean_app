@@ -29,4 +29,7 @@ class MyImages{
   static String image = "assets/icon_metro_file_picture.png";
   static String deleteIcon = "assets/delete icon.png";
   static String downloadIcon = "assets/download icon.png";
+  static String horn = "assets/horn.png";
+  static String cart = "assets/cart.png";
+  static String saleTag = "assets/sale tag.png";
 }

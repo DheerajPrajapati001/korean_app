@@ -38,7 +38,7 @@ class _SearchState extends State<Search> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
-                      color: MyColors.greyBorderClr
+                        color: MyColors.greyBorderClr
                     ),
                   ),
                   child: Row(
@@ -58,8 +58,8 @@ class _SearchState extends State<Search> {
                         width: MediaQuery.of(context).size.width*.2,
                         height: MediaQuery.of(context).size.height*.055,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: MyColors.greyClr.withOpacity(0.5)
+                            borderRadius: BorderRadius.circular(10),
+                            color: MyColors.greyClr.withOpacity(0.5)
                         ),
                         child: Center(
                           child: Text(MyStrings.search),

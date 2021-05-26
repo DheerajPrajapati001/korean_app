@@ -49,20 +49,49 @@ class _ButtonsState extends State<Buttons> {
                   child: Text('Page 8'),
                 ),
                 SizedBox(height: 10,),
+                // ignore: deprecated_member_use
                 RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page9');},
                   child: Text('Page 9'),
                 ),
                 SizedBox(height: 10,),
+                // ignore: deprecated_member_use
                 RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page10');},
                   child: Text('Page 10'),
                 ),
                 SizedBox(height: 10,),
+                // ignore: deprecated_member_use
                 RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page11');},
                   child: Text('Page 11'),
                 ),
                 SizedBox(height: 10,),
+                // ignore: deprecated_member_use
                 RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page12');},
                   child: Text('Page 12'),
+                ),
+                SizedBox(height: 10,),
+                // ignore: deprecated_member_use
+                RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page13');},
+                  child: Text('Page 13'),
+                ),
+                SizedBox(height: 10,),
+                // ignore: deprecated_member_use
+                RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page14');},
+                  child: Text('Page 14'),
+                ),
+                SizedBox(height: 10,),
+                // ignore: deprecated_member_use
+                RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page15');},
+                  child: Text('Page 15'),
+                ),
+                SizedBox(height: 10,),
+                // ignore: deprecated_member_use
+                RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page16');},
+                  child: Text('Page 16'),
+                ),
+                SizedBox(height: 10,),
+                // ignore: deprecated_member_use
+                RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page17');},
+                  child: Text('Page 17'),
                 ),
                 SizedBox(height: 10,),
               ],

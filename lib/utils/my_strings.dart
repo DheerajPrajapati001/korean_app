@@ -21,6 +21,7 @@ class MyStrings{
   static String lastSeen = 'Last seen:';
   static String weekAgo = '1 week ago';
   static String call = 'Call';
+  static String availableFunds = 'Available Funds';
   static String search = 'Search';
   static String request = 'Request';
   static String secureTransaction = '100% secure transaction Direct\nransaction prevention system';
